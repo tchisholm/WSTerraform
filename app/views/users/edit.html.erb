@@ -1,0 +1,56 @@
+<div id="main">
+  <div id="tab6">
+     <div class="body">
+      <br/><br/>
+      
+      <h3>User ID: <span class="head1"><%=h current_user.name %></span></h3>
+      <h2>Edit User</h2>
+
+      <%= error_messages_for :user %>
+
+       <div id="left">
+         <fieldset>
+          <% form_for (current_user) do |f| %>
+            <p><b><label for="name">Name:</label></b><br/>
+            <%= f.text_field :name, :size => 40 %></p>
+
+            <p><b><label for="email">Email:</label></b><br/>
+            <%= f.text_field :email, :size => 40 %></p>
+
+            <p><b><label for="password">Password:</label></b><br/>
+            <%= f.password_field :password, :size => 40 %></p>
+
+            <p><b><label for="password_confirmation">Confirm Password:</label></b><br/>
+            <%= f.password_field :password_confirmation, :size => 40 %></p>
+
+            <p><%= submit_tag 'Update' %></p>
+          <% end %>
+
+          <script language="JavaScript"> document.forms[0].user_name.select(); </script>
+          <script language="JavaScript"> document.forms[0].user_name.focus(); </script>
+        </fieldset>
+      </div>
+
+      <div id="right">
+        <% if current_user.admin %>
+          <div class="list2">
+            <table class="list" border="1" cellpadding="3">
+              <tr class="header">
+                <th class="name">User ID</th>
+                <th class="name">Name</th>
+                <th class="icon"><img src="/images/delete.gif" width="20" height="20"></th>
+              </tr>
+            </table>
+          </div>
+          <div class="list2">
+            <table class="list" border="1" cellpadding="3">
+              <%= render :partial => 'user', :collection => User.find(:all) %>
+            </table>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+</div>

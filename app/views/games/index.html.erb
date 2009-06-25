@@ -1,0 +1,34 @@
+<div id="main">
+    
+  <br/>
+  <%= link_to image_tag("/images/new.gif", :border => "0", :size => "30x30", :alt => "New Game"), 
+    new_game_path %>&nbsp
+  <%= render :partial => '/helppages/help_button_link' %>
+  
+  <div class="body">
+    
+    <h2>Game List</h2>
+
+    <% if @games.size > 0 %>
+      <div class="list" style="width:580px">
+        <table class="list" border="1" cellpadding="3">
+          <tr class="header">
+            <th class="name">Game Name</th>
+            <th class="name">Owner</th>
+            <th colspan="2" width="50px">Action</th>
+          </tr>
+        </table>
+      </div>
+      <div class="list" style="width:580px">
+        <table class="list" border="1" cellpadding="3">
+          <%= render :partial => 'game', :collection => @games %>
+        </table>
+      </div>
+      <br />
+    <% else %>
+      <p>No games have been set up yet.</p>
+    <% end %>
+
+  </div>
+  
+</div>

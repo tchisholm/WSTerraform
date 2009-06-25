@@ -1,0 +1,37 @@
+<div id="main">
+  <div id="tab7">
+    
+    <div class="body" style="color:cornsilk">
+      
+      <h2>Welcome!</h2>
+
+      <p style="font-size:16px;font-weight:bold">
+        Welcome to <span style="color:mediumturquoise;font-size:1.2em">Terraformers</span>, <br />
+        a WorldSmiths card game.
+      </p>
+      <p style="font-size:16px;font-weight:bold">
+        Please login below or click on the Sign Up tab above.
+      </p>
+
+      <%= error_messages_for :user %>
+
+      <fieldset>
+
+        <% form_tag session_path do -%>
+          <p><b><label for="login">User ID:</label></b><br/>
+          <%= text_field_tag 'user_login', nil, :size => 40 %></p>
+
+          <p><b><label for="password">Password:</label></b><br/>
+          <%= password_field_tag 'password', nil, :size => 40 %></p>
+
+          <p><%= submit_tag 'Log in' %></p>
+        <% end -%>
+        
+        <script language="JavaScript"> document.forms[0].user_login.focus(); </script>
+
+      </fieldset>
+
+    </div>
+  
+  </div>
+</div>

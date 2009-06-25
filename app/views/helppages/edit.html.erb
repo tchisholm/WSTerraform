@@ -1,0 +1,31 @@
+<div id="main">
+  <div id="tab8">
+    
+    <br/>
+    <% if @helppage.name != "General Instructions" %>
+      <%= link_to image_tag("/images/back.gif", :border => "0", :size => "30x30", :alt => "Back"), 
+        session[:original_uri] %>
+    <% end %>
+    
+    <div class="body">
+      
+      <h2 style="color:white"><%=h @helppage.name %></h2>
+
+      <%= error_messages_for :helppage %>
+      
+      <% form_for([@helppage]) do |f| %>
+        <p>
+          <b>Help Text:</b><br />
+          <%= f.text_area :page_text %>
+        </p>
+        <p>
+          <%= f.submit 'Update' %>
+        </p>
+      <% end %>
+      
+      <script language="JavaScript"> document.forms[0].helppage_page_text.focus(); </script>
+          
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div id="main">
+  <div id="tab8">
+    
+    <br/>
+    <% if @helppage.name != "General Instructions" %>
+      <%= link_to image_tag("/images/back.gif", :border => "0", :size => "30x30", :alt => "Back"), 
+        session[:original_uri] %>
+    <% end %>
+      
+    <div class="body">
+      
+      <h2 style="color:white"><%=h @helppage.name %></h2>
+
+      <%= error_messages_for :helppage %>
+      
+      <div id="left" style="color:white;font-weight:bold">
+        
+        <p><%= @helppage.page_text %></p>
+        
+      </div>
+
+    </div>
+
+  </div>
+</div>

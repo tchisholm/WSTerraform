@@ -1,0 +1,22 @@
+<h1>Listing helppages</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Page text</th>
+  </tr>
+
+<% @helppages.each do |helppage| %>
+  <tr>
+    <td><%=h helppage.name %></td>
+    <td><%=h helppage.page_text %></td>
+    <td><%= link_to 'Show', helppage %></td>
+    <td><%= link_to 'Edit', edit_helppage_path(helppage) %></td>
+    <td><%= link_to 'Destroy', helppage, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New helppage', new_helppage_path %>

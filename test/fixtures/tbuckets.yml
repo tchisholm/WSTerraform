@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  abucket_id: 1
+  tran_id: 1
+  damount: 9.99
+  wamount: 9.99
+
+two:
+  abucket_id: 1
+  tran_id: 1
+  damount: 9.99
+  wamount: 9.99

@@ -1,0 +1,251 @@
+/* General styles */
+
+body {
+  background-color: #046;
+  /*background-image: url("/images/MoneyBucketsBackground.jpg");
+  background-attachment: fixed;*/
+  /*background-repeat: no-repeat;*/
+  color: white;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   14px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+td {
+  font-weight: bold;
+}
+
+fieldset {
+  border: thin solid black;
+  background-color: cornsilk;
+  color: black;
+  padding: 20px;
+  width: 275px;
+}
+
+/* Styles for banner section */
+
+#banner {
+  float: top;
+  padding: 20px;
+  padding-bottom: 0px;
+  background-color: black;
+  height: 60px;
+  min-width: 635px;
+  font-weight: bold;
+  color: cornsilk;
+ }
+
+#banner div.left {
+  float: left;
+ }
+ 
+#banner div.right {
+  float: right;
+  padding-top: 1px;
+ }
+ 
+/* Styles for menu section */
+
+#menu {
+  float: top;
+  background-color: #057;
+  height: 36px;
+  min-width: 675px;
+ }
+
+/* Styles for navigation section */
+
+#navigation {
+  display: inline;
+  font-variant: small-caps;
+  font-weight: bold;
+  color: black;
+ }
+
+#navigation a {
+  color: cornsilk;
+  text-decoration: none;
+}
+
+#navigation a:hover {
+  color: darkblue;
+}
+
+#navigation div {
+  width: 80px;
+  height: 16px;
+  padding: 8px 10px 12px 10px;
+  text-align: center;
+  float: left;
+}
+
+/* Styles for main section */
+
+#main {
+  color: mediumturquoise;
+/*  width: 900px;*/
+}	
+
+#main div.body{
+/*  height: 490px; */
+  padding-top: 20px;
+}	
+
+#left{
+/*  width: 48%;*/
+  width: 340px;
+  float: left;
+/*  padding-right: 20px;*/
+}	
+
+#right{
+/*  width: 50%;*/
+  float: top;
+  display: inline;
+}	
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h2.center {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 0px;
+  color: white;
+}
+
+span.head1 {
+  color: moccasin;
+}
+
+span.head2 {
+  color: paleturquoise;
+}
+
+span.fieldvalue {
+  color: lightseagreen;
+}
+
+h4 {
+  margin-bottom: 5px;
+  color: silver;
+}
+
+table.list {
+  background-color: cornsilk;
+  color: mediumblue;
+}
+
+tr.header {
+  background-color: mediumblue;
+  color: cornsilk;
+}
+
+tr.list-line-even {
+  background-color: #BDF;
+}
+
+tr.list-line-odd {
+  background-color:  cornsilk;
+}
+
+th.date, td.date {
+  text-align: center;
+  width: 100px;
+}
+
+th.name, td.name {
+  text-align: left;
+  width: 250px;
+}
+
+th.currency, td.currency {
+  text-align: right;
+  width: 110px;
+}
+
+th.icon, td.icon {
+  text-align: center;
+  width: 20px;
+}
+
+th.type, td.type {
+  text-align: center;
+  width: 50px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color:darkgoldenrod;font-weight:bold;text-decoration:none; }
+a:hover { color: black }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  color: black;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+

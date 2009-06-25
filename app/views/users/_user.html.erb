@@ -1,0 +1,10 @@
+<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+  <td class="name"><%=h user.login %></td>
+  <td class="name"><%=h user.name %></td>
+  <% if user.login != current_user.login %>
+    <td class="icon"><%= link_to image_tag("/images/delete.gif", :border => "0", :size => "20x20", :alt => "Delete"), 
+    [user], :confirm => 'Are you sure you want to delete this user?', :method => :delete %></td>
+  <% else %>
+    <td class="icon">&nbsp</td>
+  <% end %>
+</tr>

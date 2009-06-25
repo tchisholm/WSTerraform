@@ -1,0 +1,35 @@
+<div id="navigation">
+  <% if logged_in? %>
+    <div style="background-color:#0AC">
+      <%= link_to "Games", games_path %>
+    </div>
+    <div style="background-color:#09B">
+      &nbsp
+    </div>
+    <div style="background-color:#08A">
+      <%= link_to "User", userinfo_path %>
+    </div>
+    <div style="background-color:#079">
+      <%= link_to "Logout", logout_path %>
+    </div>
+    <div style="background-color:#068">
+      <% if current_user.admin %>
+        <%= link_to "Help", edit_helppage_path("General Instructions") %>
+      <% else %>
+        <%= link_to "Help", helppage_path("General Instructions") %>
+      <% end %>
+    </div>
+  <% else %>
+    <div style="background-color:#0AC">&nbsp</div>
+    <div style="background-color:#09B">&nbsp</div>
+    <div style="background-color:#08A">
+      <%= link_to "Sign Up", signup_path %>
+    </div>
+    <div style="background-color:#079">
+      <%= link_to "Login", login_path %>
+    </div>
+    <div style="background-color:#068">&nbsp</div>
+  <% end %>
+  <div style="float:right;padding-right:72px;color:aqua;font-size:1.2em">Terraformers</div>
+  <br/><br/>
+</div>

@@ -1,0 +1,8 @@
+<% session[:original_uri] = request.request_uri %>
+<% if current_user.admin %>
+  <%= link_to image_tag("/images/help.gif", :border => "0", :size => "30x30", :alt => "Help"), 
+    edit_helppage_path("#{@help}") %>
+<% else %>
+  <%= link_to image_tag("/images/help.gif", :border => "0", :size => "30x30", :alt => "Help"), 
+    helppage_path("#{@help}") %>
+<% end %>

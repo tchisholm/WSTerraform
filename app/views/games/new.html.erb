@@ -1,0 +1,32 @@
+<div id="main">
+    
+  <br/>
+  <%= link_to image_tag("/images/back.gif", :border => "0", :size => "30x30", :alt => "Back to Game List"), 
+    games_path %>&nbsp
+  <%= render :partial => '/helppages/help_button_link' %>
+  
+  <div class="body">
+    
+    <h2>New Game</h2>
+
+    <%= error_messages_for :game %>
+    
+    <fieldset>
+
+      <% form_for([@game]) do |f| %>
+        <p>
+          <b>Game Name:</b><br />
+          <%= f.text_field :name, :size => 40 %>
+        </p>
+        <p>
+          <%= f.submit 'Create' %>
+        </p>
+      <% end %>
+      
+      <script language="JavaScript"> document.forms[0].game_name.focus(); </script>
+    
+    </fieldset>
+
+  </div>
+  
+</div>

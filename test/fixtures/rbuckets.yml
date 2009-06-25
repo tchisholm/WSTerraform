@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  abucket_id: 1
+  recurring_id: 1
+  amount: 9.99
+
+two:
+  abucket_id: 1
+  recurring_id: 1
+  amount: 9.99

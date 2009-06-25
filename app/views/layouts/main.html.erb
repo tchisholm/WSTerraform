@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Terraformers</title>
+  <%= stylesheet_link_tag 'wsterraform' %>
+</head>
+
+<body>
+
+  <div id="banner">
+    <div class="left">
+      <img src="/images/mylifelogo.bmp">
+    </div>
+    <div class="right">
+      <img src="/images/worldsmiths.bmp">
+    </div>
+  </div>
+  <div id="menu">
+  <div>
+    <%= render :partial => '/layouts/navigation' %>
+  </div>
+  </div>
+
+  <% if flash[:error] %>
+    <p style="color:red"><%= flash[:error] %></p>
+  <% end %>
+
+  <%= yield  %>
+    
+</body>
+</html>

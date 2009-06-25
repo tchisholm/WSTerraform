@@ -1,0 +1,38 @@
+<div id="main">
+  <div id="tab6">
+    
+    <div class="body">
+      
+      <h2>New User</h2>
+      
+      <%= error_messages_for :user %>
+
+      <fieldset>
+
+        <% form_for :user, :url => users_path do |f| %>
+          <p><b><label for="login">User ID:</label></b><br/>
+          <%= f.text_field :login, :size => 29 %></p>
+
+          <p><b><label for="name">Name:</label></b><br/>
+          <%= f.text_field :name, :size => 29 %></p>
+
+          <p><b><label for="email">Email:</label></b><br/>
+          <%= f.text_field :email, :size => 29 %></p>
+
+          <p><b><label for="password">Password:</label></b><br/>
+          <%= f.password_field :password, :size => 31 %></p>
+
+          <p><b><label for="password_confirmation">Confirm Password:</label></b><br/>
+          <%= f.password_field :password_confirmation, :size => 31 %></p>
+
+          <p><%= submit_tag 'Sign up' %></p>
+        <% end %>
+        
+        <script language="JavaScript"> document.forms[0].user_login.focus(); </script>
+
+      </fieldset>
+
+    </div>
+  
+  </div>
+</div>
