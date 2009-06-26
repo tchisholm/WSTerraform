@@ -41,8 +41,17 @@ class GamesController < ApplicationController
     @game = Game.new(params[:game])
     @game.owner = current_user.login
     @game.current_player = 0
+    @game.mode = "idle"
     respond_to do |format|
       if @game.save
+        @player = @game.players.build
+        @player.game_id = @game.id
+        @player.user_id = current_user.id
+        @player.player_number = 1
+        @player.dice_1 = 0
+        @player.dice_2 = 0
+        @player.dice_3 = 0
+        @player.save
         flash[:notice] = 'Game was successfully created.'
         format.html { redirect_to(games_path) }
         format.xml  { render :xml => @game, :status => :created, :location => @game }
@@ -76,6 +85,31 @@ class GamesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(games_path) }
       format.xml  { head :ok }
+    end
+  end
+
+  def join_game
+    @player = @game.players.build
+    @player.game_id = @game.id
+    @player.user_id = current_user.id
+    @player.player_number = @game.players.count+1
+    @player.dice_1 = 0
+    @player.dice_2 = 0
+    @player.dice_3 = 0
+    @player.save
+    respond_to do |format|
+      format.html { redirect_to(games_path) }
+      format.xml  { head :ok }
+    end
+  end
+
+  def play_game
+    @player = @game.players.find_by_user_id(current_user.id)
+    @player.active = true
+    @player.save
+    if !@game.players.find_by_active(nil) and @game.mode == 'idle'
+      @game.mode = 'started'
+      @game.save
     end
   end
 

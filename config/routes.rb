@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :users
+  map.resources :users, :has_many => [ :players, :games ]
   
   map.resource :session, :controller => 'session'
   map.signup '/signup', :controller => 'users', :action => 'new'
@@ -9,7 +9,8 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', :controller => 'session', :action => 'destroy'
 
   map.resources :helppages
-  map.resources :games
+  map.resources :games, :has_many => [ :players, :users ], :member => { :join_game => :get, :play_game => :get }
+  map.resources :players
   
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -35,7 +35,7 @@ fieldset {
   padding-bottom: 0px;
   background-color: black;
   height: 60px;
-  min-width: 635px;
+  min-width: 845px;
   font-weight: bold;
   color: cornsilk;
  }
@@ -55,7 +55,7 @@ fieldset {
   float: top;
   background-color: #057;
   height: 36px;
-  min-width: 675px;
+  min-width: 885px;
  }
 
 /* Styles for navigation section */
@@ -145,6 +145,10 @@ table.list {
   color: mediumblue;
 }
 
+tr {
+  vertical-align: bottom;
+}
+
 tr.header {
   background-color: mediumblue;
   color: cornsilk;
@@ -180,7 +184,7 @@ th.icon, td.icon {
 
 th.type, td.type {
   text-align: center;
-  width: 50px;
+  width: 60px;
 }
 
 pre {
@@ -189,7 +193,7 @@ pre {
   font-size: 11px;
 }
 
-a { color:darkgoldenrod;font-weight:bold;text-decoration:none; }
+a { color:mediumblue;font-weight:bold; }
 a:hover { color: black }
 
 .fieldWithErrors {
